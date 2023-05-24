@@ -1,0 +1,258 @@
+<section class="banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-xl-7">
+				<div class="block">
+					<div class="divider mb-3"></div>
+					<span class="text-uppercase text-sm letter-spacing ">Dịch vụ nha khoa</span>
+					<h1 class="mb-3 mt-3">Người bạn đồng hành uy tín của bạn</h1>
+					
+					<p class="mb-4 pr-5">Hãy để chúng tôi làm cho nụ cười của bạn thêm rạng rỡ.</p>
+					<div class="btn-container ">
+						<a routerLink="dat-lich"  class="btn btn-main-2 btn-icon btn-round-full">Đặt lịch <i class="icofont-simple-right ml-2  "></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="features">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="feature-block d-lg-flex">
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-home"></i>
+						</div>
+						<h4 class="mb-3">Địa chi phòng khám </h4>
+						<ul class="w-hours list-unstyled">
+							<li *ngFor="let clinic of clinics" class="d-flex justify-content-between">
+								{{clinic.address}}<span>{{clinic.phoneNumber}}</span>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-ui-clock"></i>
+						</div>
+						<h4 class="mb-3">Giờ làm việc</h4>
+						<ul class="w-hours list-unstyled">
+		                    <li class="d-flex justify-content-between">T2 - T4 : <span>8:00 - 17:00</span></li>
+		                    <li class="d-flex justify-content-between">T5 - T6 : <span>9:00 - 17:00</span></li>
+		                    <li class="d-flex justify-content-between">T7 - CN : <span>10:00 - 17:00</span></li>
+		                </ul>
+					</div>
+				
+					<div class="feature-item mb-5 mb-lg-0">
+						<div class="feature-icon mb-4">
+							<i class="icofont-support"></i>
+						</div>
+						<h4>Đường dây nóng:</h4>
+						<h4 class="mb-3">+84 913 914 930</h4>
+						<p>Hãy liên lạc với đường dây nóng trên nếu bạn cần hỗ trợ gấp.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="section about">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-4 col-sm-6">
+				<div class="about-img">
+					<img src="assets/images/about/img-1.jpg" alt="" class="img-fluid">
+					<img src="assets/images/about/img-2.jpg" alt="" class="img-fluid mt-4">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="about-img mt-4 mt-lg-0">
+					<img src="assets/images/about/img-3.jpg" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="about-content pl-4 mt-4 mt-lg-0">
+					<h2 class="title-color">Hiệu quả <br>& uy tín</h2>
+					<p class="mt-4 mb-5">
+						Chúng tôi là Trung tâm nha khoa thẩm mỹ hàng đầu, được bình chọn là Trung tâm nha khoa uy tín tại Thành phố và khu vực Miền Trung. Chúng tôi sử dụng những thiết bị hiện đại nhất, những vật liệu tốt nhất, những quy trình điều trị tiên tiến nhất, những con người giỏi nhất để phục vụ Quý khách hàng.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="cta-section ">
+	<div class="container">
+		<div class="cta position-relative">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="counter-stat">
+						<i class="icofont-doctor"></i>
+						<span class="h3">5000</span>+
+						<p>Khách hàng</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="counter-stat">
+						<i class="icofont-flag"></i>
+						<span class="h3">7000</span>+
+						<p>Ca khám</p>
+					</div>
+				</div>
+				
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="counter-stat">
+						<i class="icofont-badge"></i>
+						<span class="h3">20</span>+
+						<p>Bác sĩ và điều dưỡng</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="counter-stat">
+						<i class="icofont-globe"></i>
+						<span class="h3">3</span>
+						<p>Cơ sở trên toàn quốc</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section style="margin-top: 40px;" class="section testimonial-2 gray-bg">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7">
+				<div class="section-title text-center">
+					<h2>Đánh giá</h2>
+					<div class="divider mx-auto my-4"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-12 testimonial-wrap-2">
+				<div class="testimonial-block style-2  gray-bg">
+					<i class="icofont-quote-right"></i>
+
+					<div class="testimonial-thumb">
+						<img src="assets/images/team/test-thumb1.jpg" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info ">
+						<h4>Dịch vụ tuyệt vời!</h4>
+						<span>John Partho</span>
+						<p>
+							Nụ cười rạng rỡ giúp mình tỏa sáng trong mọi khung hình, tận hưởng trọn vẹn thời khắc khởi đầu năm mới với năng lượng và hạnh phúc tràn đầy. 
+						</p>
+					</div>
+				</div>
+
+				<div class="testimonial-block style-2  gray-bg">
+					<div class="testimonial-thumb">
+						<img src="assets/images/team/test-thumb2.jpg" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info">
+						<h4>Bác sĩ thật tuyệt!</h4>
+						<span>Mullar Sarth</span>
+						<p>
+							Mình cảm thấy rất hài lòng về chất lượng, tay nghề của Bác sĩ cũng như phong cách làm việc của đội ngũ nhân viên ở Nụ Cười Việt. Bác sĩ làm rất nhẹ nhàng, không đau, về nhà ăn nhai vẫn thoải mái. Cảm ơn Nha khoa rất nhiều!
+						</p>
+					</div>
+					
+					<i class="icofont-quote-right"></i>
+				</div>
+
+				<div class="testimonial-block style-2  gray-bg">
+					<div class="testimonial-thumb">
+						<img src="assets/images/team/test-thumb3.jpg" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info">
+						<h4>Hỗ trợ tốt!</h4>
+						<span>Kolis Mullar</span>
+						<p>
+							Cám ơn rất rất nhiều đặc biệt đến Bs. Phương và y sĩ cùng đội ngũ KTV Labo đã tận tâm điều trị, chữa răng và thiết kế form răng rất hài lòng trong quá trình mình làm răng ở Hệ thống Nha khoa Thẩm mỹ Nụ Cười Việt.
+						</p>
+					</div>
+					
+					<i class="icofont-quote-right"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section clients">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7">
+				<div class="section-title text-center">
+					<h2>Các đối tác</h2>
+					<div class="divider mx-auto my-4"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row clients-logo">
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/1.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/2.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/3.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/4.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/5.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/6.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/3.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/4.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/5.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="assets/images/about/6.png" alt="" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

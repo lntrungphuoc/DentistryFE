@@ -1,0 +1,101 @@
+<section class="page-title bg-1">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <h1 class="text-capitalize mb-5 text-lg">Chi tiết sổ sức khỏe</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-form-wrap section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="section-title text-center">
+          <h2 class="text-md mb-2">Thông tin sổ sức khỏe</h2>
+          <div class="divider mx-auto my-4"></div>
+          <table class="table table-bordered table-hover dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Chẩn đoán</th>
+                <th>Thuốc</th>
+                <th>Bác sĩ</th>
+                <th>Dịch vụ</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let detail of eHealthBookDetails; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{detail.diagnose}}</td>
+                <td>{{detail.medicine}}</td>
+                <td>
+                  <div *ngFor="let doctor of detail.eHealthBookDetailDoctor">
+                    <p>{{doctor.doctor.name}}</p>
+                  </div>
+                </td>
+                <td>
+                  <div *ngFor="let service of detail.eHealthBookDetailServices">
+                    <p>{{service.service.name}}</p>
+                  </div>
+                </td>
+                <td>
+                  <button style="background-color: transparent;" class="btn text-primary p-1" title="Tải đính kèm"
+                    data-toggle="modal" data-target="#down" (click)="getListAttachment(i)"><i
+                      class="fa fa-download fa-lg" aria-hidden="true"></i></button>
+                  <!-- Download attachment -->
+                  <div class="modal fade" id="down" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Tải tài liệu</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                              aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                            <thead>
+                              <tr>
+                                <th>Tên tài liệu</th>
+                                <th>Thao tác</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let a of listAttachmentDownload">
+                                <td>{{a.fileName}}</td>
+                                <td>
+                                  <button style="background-color: transparent;" class="btn text-primary p-1"
+                                    title="Xem" (click)="viewAttachment(a.url)">
+                                    <i class="fa fa-eye"></i>
+                                  </button>
+                                  <button style="background-color: transparent;" class="btn text-primary p-1"
+                                    title="Tải" (click)="downloadAttachment(a.url, a.fileName)">
+                                    <i class="fa fa-download"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Hủy</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Download attachment -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<section class="section doctor-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="doctor-img-block">
+					<img style="height: 350px; width: 350px;" src="{{doctor.avatarUrl}}" alt="{{doctor.avatarUrl}}" class="img-fluid w-100">
+
+					<div class="info-block mt-4">
+						<h4 class="mb-0">{{doctor.name}}</h4>
+
+						<ul class="list-inline mt-4 doctor-social-links">
+							<li class="list-inline-item"><a href="#"><i class="icofont-facebook"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="icofont-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="icofont-skype"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="icofont-linkedin"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="icofont-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-8 col-md-6">
+				<div class="doctor-details mt-4 mt-lg-0">
+					<h2 class="text-md">Thông tin bác sĩ</h2>
+					<div class="divider my-4"></div>
+                        <div [innerHtml]="createTrustedHtml(doctor.information)"></div>
+					<button (click)="datLich()" class="btn btn-main-2 btn-round-full mt-3">Đặt lịch<i class="icofont-simple-right ml-2  "></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

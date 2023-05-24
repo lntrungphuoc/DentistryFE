@@ -1,0 +1,63 @@
+<section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block text-center">
+            <h1 class="text-capitalize mb-5 text-lg">Sổ sức khỏe</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact-form-wrap section">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-12">
+                  <div class="section-title text-center">
+                      <h2 class="text-md mb-2">Thông tin khách hàng</h2>
+                      <div class="divider mx-auto my-4"></div>
+                      <p class="mb-10">Họ tên: {{customer.customerName}}</p>
+                      <p class="mb-10">Địa chỉ: {{customer.address}}</p>
+                      <p class="mb-10">Số điện thoại: {{customer.phoneNumber}}</p>
+                  </div>
+
+                  <table class="table table-bordered table-hover dataTable" style="text-align: center;" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>STT</th>
+                        <th>Ngày khám</th>
+                        <th>Phòng khám</th>
+                        <th>Dịch vụ</th>
+                        <th>Tổng chi phí</th>
+                        <th>Ngày tái khám</th>
+                        <th>Ghi chú</th>
+                        <th>Thao tác</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let detail of eHealthBook; index as i">
+                        <td>{{i + 1}}</td>
+                        <td>{{detail.checkUpDate | date: 'dd-MM-yyyy'}}</td>
+                        <td>{{detail.clinic.address}}</td>
+                        <td>
+                          <div *ngFor="let service of detail.eHealthBookServices">
+                            <p>{{service.service.name}}</p>
+                          </div>
+                        </td>
+                        <td>{{detail.totalFee}}</td>
+                        <td>{{detail.reExaminationDate | date:"dd-MM-yyyy hh:mm"}}</td>
+                        <td>{{detail.note}}</td>
+                        <td>
+                          <button class="btn text-primary p-1" title="Chi tiết" (click)="eHealthBookDetail(i)">
+                            <i class="fa fa-info-circle fa-lg"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </section>

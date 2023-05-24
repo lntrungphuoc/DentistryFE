@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AppDentistryFE';
+  currentRoute: any;
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+    this.currentRoute = window.location.href.split("/")[3];
+  }
 }
