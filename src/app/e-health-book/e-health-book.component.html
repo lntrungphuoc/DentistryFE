@@ -31,6 +31,7 @@
                         <th>Phòng khám</th>
                         <th>Dịch vụ</th>
                         <th>Tổng chi phí</th>
+                        <th>BS phụ trách</th>
                         <th>Ngày tái khám</th>
                         <th>Ghi chú</th>
                         <th>Thao tác</th>
@@ -47,6 +48,7 @@
                           </div>
                         </td>
                         <td>{{detail.totalFee}}</td>
+                        <td>{{detail.doctor != null ? detail.doctor.name : ""}}</td>
                         <td>{{detail.reExaminationDate | date:"dd-MM-yyyy hh:mm"}}</td>
                         <td>{{detail.note}}</td>
                         <td>
