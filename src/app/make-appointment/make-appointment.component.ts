@@ -57,8 +57,12 @@ export class MakeAppointmentComponent implements OnInit {
   onSubmit(data) {
     this.appointmentSchedule.idClinic = data.clinic;
     this.appointmentSchedule.date = data.date;
-    var strDate = data.date.toString()+"T"+data.time+":00.0000000";
+    var strDate = data.date.toString() + 'T' + data.time + ':00.0000000';
     this.appointmentSchedule.time = new Date(strDate);
+    this.appointmentSchedule.time.setMinutes(
+      this.appointmentSchedule.time.getMinutes() + 420
+    );
+    // this.appointmentSchedule.time = new Date(strDate);
     this.appointmentSchedule.name = data.name;
     this.appointmentSchedule.phoneNumber = data.phoneNumber;
     this.appointmentSchedule.content = data.content;
